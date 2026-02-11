@@ -32,9 +32,7 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField] public Pickup itemHolding = null;
 
-    [field: SerializeField] public Vector3 currentRespawnPOS;
-
-    [field: SerializeField] public Vector3[] respawnPOSs;
+    [field: SerializeField] public GameObject respawnPOS;
 
     [field: SerializeField] private float respawnTimer;
 
@@ -113,7 +111,7 @@ public class PlayerController : MonoBehaviour
             if (respawnTimer > respawnTimerMax)
             {
                 dead = false;
-                transform.position = currentRespawnPOS;
+                transform.position = respawnPOS.transform.position;
             }
         }
 

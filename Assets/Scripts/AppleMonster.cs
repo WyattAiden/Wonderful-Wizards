@@ -4,6 +4,11 @@ using UnityEngine;
 public class AppleMonster : MonoBehaviour
 {
     public int applesToEat = 3;
+    public GameObject water;
+    private float deathTimer = 0;
+    public float deathDuration = 1f;
+    private bool isDead;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,7 +25,14 @@ public class AppleMonster : MonoBehaviour
     {
         if (applesToEat <= 0)
         {
-            gameObject.SetActive(false);
+            if (!isDead) deathTimer += Time.deltaTime;
+
+            if (deathTimer > deathDuration & !isDead)
+            {
+                gameObject.SetActive(false);
+                water.SetActive(false);
+                isDead = true;
+            }
         }
     }
 }

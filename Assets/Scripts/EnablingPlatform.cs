@@ -4,17 +4,14 @@ public class EnablingPlatform : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Collider2D Collider;
-    [SerializeField] private bool isOn = false;
+    [SerializeField] public bool isOn = false;
     [SerializeField] private State currentState = State.Triangle;
+    [SerializeField] public bool isBallPlatform = true;
     public enum State
     {
         Triangle,
         Square,
         Circle
-    }
-
-    private void Start()
-    {
     }
 
     private void Update()
@@ -35,6 +32,7 @@ public class EnablingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isBallPlatform) return;
         if (currentState == State.Triangle)
         {
             if (collision.name == "Triangle Ball")
@@ -45,7 +43,7 @@ public class EnablingPlatform : MonoBehaviour
             }
         }
 
-        if (currentState == State.Square)
+        else if (currentState == State.Square)
         {
             if (collision.name == "Square Ball")
             {
@@ -55,7 +53,7 @@ public class EnablingPlatform : MonoBehaviour
             }
         }
 
-        if (currentState == State.Circle)
+        else if (currentState == State.Circle)
         {
             if (collision.name == "Circle Ball")
             {
@@ -68,6 +66,7 @@ public class EnablingPlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!isBallPlatform) return;
         if (currentState == State.Triangle)
         {
             if (collision.name == "Triangle Ball")
@@ -78,7 +77,7 @@ public class EnablingPlatform : MonoBehaviour
             }
         }
 
-        if (currentState == State.Square)
+        else if (currentState == State.Square)
         {
             if (collision.name == "Square Ball")
             {
@@ -88,7 +87,7 @@ public class EnablingPlatform : MonoBehaviour
             }
         }
 
-        if (currentState == State.Circle)
+        else if (currentState == State.Circle)
         {
             if (collision.name == "Circle Ball")
             {

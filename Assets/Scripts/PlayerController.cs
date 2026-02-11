@@ -1,6 +1,7 @@
 using NUnit.Framework.Internal.Commands;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerController : MonoBehaviour
 {
@@ -133,7 +134,8 @@ public class PlayerController : MonoBehaviour
         {
             //      pAudioSource.PlayOneShot(playerJump);
             //Add the jump value to the rigidbody2D velocity
-            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpHeight);
+            Vector2 gDir = (Physics2D.gravity * rb2d.gravityScale).normalized;
+            rb2d.linearVelocity += (-gDir) * jumpHeight;
 
             //Set coyoteTime to 0 as soon as they jump so they can't jump again
             coyoteTime = 0f;
@@ -167,11 +169,11 @@ public class PlayerController : MonoBehaviour
 
     void CheckJump()
     {
-        isGrounded = Physics2D.Raycast(
-            feet.position,
-            Vector2.down,
-            groundCheckRay,
-            groundLayer
+        Vector2 gDir = (Physics2D.gravity * rb2d.gravityScale).normalized;
+
+        isGrounded = Physics2D.Raycast //Returns true if raycast hits
+        (
+        feet.position, gDir, groundCheckRay, groundLayer
         );
 
         if (isGrounded)
@@ -207,8 +209,17 @@ public class PlayerController : MonoBehaviour
         {
             Gizmos.color = Color.white;
         }
+        Vector2 gDir = (Physics2D.gravity * rb2d.gravityScale).normalized;
         //This is not actually associated with our Raycast, but uses the same math
-        Gizmos.DrawRay(feet.position, Vector2.down * groundCheckRay);
+        Gizmos.DrawRay(feet.position, gDir * groundCheckRay);
+    }
+
+    public void FlipToes()
+    {
+        Vector3 local = feet.localPosition;
+
+        local.y = Mathf.Abs(local.y) * Mathf.Sign(Physics2D.gravity.y); 
+        feet.localPosition = local;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

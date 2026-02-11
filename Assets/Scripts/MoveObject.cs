@@ -3,6 +3,7 @@ using UnityEngine;
 public class MoveObject : MonoBehaviour, EventInterface
 {
     public GameObject PairedHole;
+    public bool isMirror = false;
 
     public void OnInteract(PlayerController player)
     {

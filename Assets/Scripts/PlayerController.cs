@@ -32,6 +32,16 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField] public Pickup itemHolding = null;
 
+    [field: SerializeField] public Vector3 currentRespawnPOS;
+
+    [field: SerializeField] public Vector3[] respawnPOSs;
+
+    [field: SerializeField] private float respawnTimer;
+
+    [field: SerializeField] public float respawnTimerMax;
+
+
+
     // Player input information
     private PlayerInput PlayerInput;
     private InputAction InputActionMove;
@@ -97,6 +107,16 @@ public class PlayerController : MonoBehaviour
     // Runs each phsyics update
     void FixedUpdate()
     {
+        if (dead)
+        {
+            respawnTimer += Time.deltaTime;
+            if (respawnTimer > respawnTimerMax)
+            {
+                dead = false;
+                transform.position = currentRespawnPOS;
+            }
+        }
+
         if (rb2d == null)
         {
             Debug.Log($"{name}'s {nameof(PlayerController)}.{nameof(Rigidbody2D)} is null.");
@@ -192,15 +212,15 @@ public class PlayerController : MonoBehaviour
             coyoteTime -= Time.fixedDeltaTime;
         }
 
-        if (!dead)
+        /*if (!dead)
         {
-            //Set the animator parameter "isJumping"
-            //      anim.SetBool("isJumping", !isGrounded);
+            Set the animator parameter "isJumping"
+                  anim.SetBool("isJumping", !isGrounded);
         }
         else
         {
-            //      anim.SetBool("isJumping", false);
-        }
+                  anim.SetBool("isJumping", false);
+        }*/
     }
 
 
@@ -228,7 +248,13 @@ public class PlayerController : MonoBehaviour
         local.y = Mathf.Abs(local.y) * Mathf.Sign(Physics2D.gravity.y); 
         feet.localPosition = local;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Death Zone"))
+        {
+            dead = true;
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactable"))

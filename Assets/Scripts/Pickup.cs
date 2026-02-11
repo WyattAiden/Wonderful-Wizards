@@ -57,10 +57,26 @@ public class Pickup : MonoBehaviour, EventInterface
         }
         
     }
-    public void SendThroughHole()
+    public void SendThroughHole(GameObject pairedHole, PlayerController Player)
     {
         transform.SetParent(null); //Parent object to player
 
-        //transform.localPosition = 
+        transform.localPosition = pairedHole.transform.position;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.simulated = true;
+        }
+
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
+
+        Player.itemHolding = null;
+        isPickedUp = false;
+        Debug.Log("Object goes through hole");
     }
 }

@@ -5,7 +5,7 @@ public class PlayerFloat : MonoBehaviour
     public float floatStrength = 0.5f;
     private Rigidbody2D rb;
     private ItemPickup heldItem;
-    private bool isFloating = false; // The toggle state
+    private bool isFloating = false;
 
     void Start()
     {
@@ -14,13 +14,13 @@ public class PlayerFloat : MonoBehaviour
 
     void Update()
     {
-        // 1. Check if we are holding an item
+        // Check if we are holding an item
         if (heldItem == null)
         {
             heldItem = GetComponentInChildren<ItemPickup>();
         }
 
-        // 2. Handle the Toggle logic
+        // Handle the Toggle logic
         if (heldItem != null && heldItem.isHeld)
         {
             // GetKeyDown only triggers ONCE per press
@@ -35,7 +35,7 @@ public class PlayerFloat : MonoBehaviour
             isFloating = false;
         }
 
-        // 3. Apply the physics based on the toggle state
+        // Apply the physics based on the toggle state
         ApplyFloatPhysics();
     }
 

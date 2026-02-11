@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public AreaInteract interactTarget { get; private set; } = null;
     [field: SerializeField] public bool dead { get; private set; } = false;
 
+    [field: SerializeField] public Pickup itemHolding = null;
+
     // Player input information
     private PlayerInput PlayerInput;
     private InputAction InputActionMove;
@@ -82,7 +84,12 @@ public class PlayerController : MonoBehaviour
         {
             if (inInteractRange && interactTarget!= null)
             {
-                interactTarget.TriggerSwitch();
+                interactTarget.TriggerSwitch(this);
+            }
+            else if (itemHolding != null)
+            {
+                AreaInteract interact = itemHolding.GetComponent<AreaInteract>();
+                interact.TriggerSwitch(this);
             }
         }
     }

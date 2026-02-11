@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface EventInterface
 {
-    public void OnInteract();
+    public void OnInteract(PlayerController player);
 }

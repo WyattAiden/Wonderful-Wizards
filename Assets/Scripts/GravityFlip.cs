@@ -4,17 +4,18 @@ using UnityEngine;
 public class GravityFlip : MonoBehaviour, EventInterface
 {
     
-    public void OnInteract()
+    public void OnInteract(PlayerController player)
     {
         Physics2D.gravity *= -1f;
 
-        PlayerController[] players =
+        PlayerController[] Players =
         Object.FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
-        foreach (PlayerController player in players) 
+        foreach (PlayerController Player in Players) 
         {
-            player.FlipToes();
+            Player.FlipToes();
         }
         Debug.Log("Gravity Flipped");
     }
+
 }

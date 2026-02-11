@@ -4,7 +4,7 @@ using System.Collections;
 
 public class AreaInteract : MonoBehaviour
 {
-    public void TriggerSwitch()
+    public void TriggerSwitch(PlayerController player)
     {
         Debug.Log("Switch Triggered");
             
@@ -12,7 +12,7 @@ public class AreaInteract : MonoBehaviour
           
         foreach (EventInterface listener in listeners)   
         {
-           listener.OnInteract();
+           listener.OnInteract(player);
         }   
     }
 }

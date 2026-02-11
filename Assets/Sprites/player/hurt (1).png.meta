@@ -130,10 +130,10 @@ TextureImporter:
       name: hurt (1)_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 255
-        width: 88
-        height: 165
+        x: 85
+        y: 256
+        width: 86
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: hurt (1)_1
       rect:
         serializedVersion: 2
-        x: 338
-        y: 255
-        width: 91
-        height: 165
+        x: 342
+        y: 256
+        width: 86
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: hurt (1)_2
       rect:
         serializedVersion: 2
-        x: 362
-        y: 411
-        width: 6
-        height: 10
+        x: 363
+        y: 412
+        width: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: hurt (1)_3
       rect:
         serializedVersion: 2
-        x: 595
-        y: 255
-        width: 90
-        height: 170
+        x: 596
+        y: 416
+        width: 12
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: hurt (1)_4
       rect:
         serializedVersion: 2
-        x: 86
-        y: 0
-        width: 88
-        height: 165
+        x: 598
+        y: 256
+        width: 86
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: hurt (1)_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 101
-        width: 15
-        height: 14
+        x: 339
+        y: 395
+        width: 8
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: hurt (1)_6
       rect:
         serializedVersion: 2
-        x: 338
+        x: 87
         y: 0
-        width: 95
-        height: 167
+        width: 86
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: hurt (1)_7
       rect:
         serializedVersion: 2
-        x: 412
-        y: 99
-        width: 23
-        height: 30
+        x: 162
+        y: 103
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: hurt (1)_8
       rect:
         serializedVersion: 2
-        x: 596
+        x: 339
         y: 0
-        width: 90
-        height: 167
+        width: 92
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: hurt (1)_9
       rect:
         serializedVersion: 2
-        x: 668
-        y: 99
-        width: 23
-        height: 30
+        x: 419
+        y: 101
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,11 +346,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: hurt (1)_10
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 0
+        width: 88
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8437a5338b54d418aa056f3e53e5b4
+      internalID: 1068078647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hurt (1)_11
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 111
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee031744236cba4c850eae12a12904c
+      internalID: -1640070203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hurt (1)_12
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 101
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bafe7c867d3544aac085f703e359d1
+      internalID: 362459466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5d00e3d3b1db994f8a0bbc1fc10b1af
     internalID: 0
     vertices: []
     indices: 
@@ -362,6 +428,9 @@ TextureImporter:
     nameFileIdTable:
       hurt (1)_0: -9125327696112618391
       hurt (1)_1: -4186922288023022263
+      hurt (1)_10: 1068078647
+      hurt (1)_11: -1640070203
+      hurt (1)_12: 362459466
       hurt (1)_2: 486714428506027405
       hurt (1)_3: -8366802123024102562
       hurt (1)_4: -9034684941510741498

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public float fallMultiplier { get; private set; } = 5f;   //Scalar to increase fall speed
     [field: SerializeField] public float lowJumpMultiplier { get; private set; } = 1.5f;
     //Low jump multiplier for tapping jump vs holding jump
-    //Coyote time AKA "ledge forgiveness"
+    //Coyote time AKA "ledge forgiveness"   
     [field: SerializeField] public float coyoteTimeMax { get; private set; } = 0.25f;
     [field: SerializeField] public float coyoteTime { get; private set; } = 0f;
     [field: SerializeField] public float dropStartSpeed { get; private set; } = 2f;
@@ -25,7 +25,9 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public LayerMask groundLayer { get; private set; }   //List of layers. There are 5 by default
     [field: SerializeField] public Transform feet { get; private set; }  //Feet Transform.
     [field: SerializeField] public float groundCheckRay { get; private set; } = 0.25f;
-    [field: SerializeField] public bool dead  = false;
+    [field: SerializeField] public bool inInteractRange { get; private set; } = false;
+    [field: SerializeField] public AreaInteract interactTarget { get; private set; } = null;
+    [field: SerializeField] public bool dead { get; private set; } = false;
 
     // Player input information
     private PlayerInput PlayerInput;
@@ -74,9 +76,13 @@ public class PlayerController : MonoBehaviour
             // and checking there we can miss inputs.
             HandleJump();
         }
+
         if (InputActionInteract.WasPressedThisFrame())
         {
-            Debug.Log("Test");
+            if (inInteractRange && interactTarget!= null)
+            {
+                interactTarget.TriggerSwitch();
+            }
         }
     }
 
@@ -204,4 +210,35 @@ public class PlayerController : MonoBehaviour
         //This is not actually associated with our Raycast, but uses the same math
         Gizmos.DrawRay(feet.position, Vector2.down * groundCheckRay);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            AreaInteract interact = collision.gameObject.GetComponent<AreaInteract>();
+            if (interact!= null)
+            {
+                inInteractRange = true;
+                interactTarget = interact;
+            }
+            
+        }
+           
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            Debug.Log("Left Interact Range");
+            AreaInteract interact = collision.gameObject.GetComponent<AreaInteract>();
+            if (interact != null && interact == interactTarget)
+            {
+                inInteractRange = false;
+                interactTarget = null;
+            }
+
+        }
+    }
+
 }

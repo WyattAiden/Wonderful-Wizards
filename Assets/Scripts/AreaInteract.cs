@@ -4,8 +4,6 @@ using System.Collections;
 
 public class AreaInteract : MonoBehaviour
 {
-    public bool playerInRange = false;
-    public bool playerHitE;
     public void TriggerSwitch()
     {
         Debug.Log("Switch Triggered");

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Linq;
 public class Timer : MonoBehaviour
 {
 
-    public Text timerText;
-    public Text leaderboardText;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI leaderboardText;
     private float startTime;
     private bool isRunning;
     private const string LeaderboardKey = "BestTimes";

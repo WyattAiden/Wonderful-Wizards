@@ -160,3 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42edd119622e598499e1f3e1391ccc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applePrefab: {fileID: 6665002270545556800, guid: 5fac8904c5cdac949bf5a5cf6c75fcd1, type: 3}
+  tree: {fileID: 0}
+  appleSpacing: 0.5

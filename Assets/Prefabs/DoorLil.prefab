@@ -160,3 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8689fcbe69bdc2749889ae125d841660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SR: {fileID: 3044592350368055808}
+  Collider: {fileID: 496679415470966726}
+  isOn: 1
+  isWinDoor: 0
+  keysToUnlock: 3

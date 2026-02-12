@@ -11,6 +11,11 @@ public class PressurePlate : MonoBehaviour
     private PlayerController playerController;
     private bool hasTriggered = false;
     public float activationTimerMax = 0.5f;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update()
     {
         if (playerOnPad)
@@ -52,6 +57,7 @@ public class PressurePlate : MonoBehaviour
         {
             playerController = collision.gameObject.GetComponent<PlayerController>();
             playerOnPad = true;
+            audioManager.PlaySFX(audioManager.PresurePlate);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

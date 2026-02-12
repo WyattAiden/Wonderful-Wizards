@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Death Zone
+  - Audio
   layers:
   - Default
   - TransparentFX

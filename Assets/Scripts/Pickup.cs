@@ -4,7 +4,11 @@ public class Pickup : MonoBehaviour, EventInterface
 {
     public bool isMirror = false;
     public bool isPickedUp = false;
-
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public void OnInteract(PlayerController player)
     {
         if (isPickedUp == false)
@@ -36,6 +40,7 @@ public class Pickup : MonoBehaviour, EventInterface
 
             player.itemHolding = this;
             isPickedUp = true;
+            audioManager.PlaySFX(audioManager.pickup);
 
         }
 

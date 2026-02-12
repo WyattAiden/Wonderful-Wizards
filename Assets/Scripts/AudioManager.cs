@@ -7,8 +7,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource SFX;
     [Header("------- Audio Clips -------")]
     public AudioClip GrvitySwitch;
-    public AudioClip pickupleft;
-    public AudioClip pickupright;
+    public AudioClip pickup;
+    public AudioClip teleportOb;
+    public AudioClip DoorOpen;
+    public AudioClip DoorClose;
+    public AudioClip MonApEat;
+    public AudioClip Switch;
+    public AudioClip PresurePlate;
+    public AudioClip Water;
 
 
 

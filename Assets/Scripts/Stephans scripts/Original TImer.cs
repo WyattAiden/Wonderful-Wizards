@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Timer : MonoBehaviour
+public class TimerOriginal : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI leaderboardText;
     private float elapsedTime;
     private bool isRunning;
+    private float startTime;
     private const string LeaderboardKey = "BestTimes";
 
     public Image oxygenMeter;
@@ -18,39 +19,43 @@ public class Timer : MonoBehaviour
     private float oxygenMeterCurrentPercent;
 
     private List<float> bestTimes = new List<float>();
-
     void Start()
     {
-        // Initialize Oxygen
-        oxygenMeterCurrentPercent = oxygenMeterMaxPercent;
 
-        LoadLeaderboardData();
-        DisplayLeaderboard(); // Show the board at the start
-        StartTimer();
     }
 
     void Update()
     {
         if (isRunning)
         {
-            elapsedTime += Time.deltaTime;
 
-            int minutes = Mathf.FloorToInt(elapsedTime / 60);
-            int seconds = Mathf.FloorToInt(elapsedTime % 60);
+            float elapsed = Time.time - startTime;
+            timerText.text = $"time: {elapsed:F2}s";
 
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-            // Fix: Changed 'elapsed' to 'elapsedTime'
-            // Also: This logic currently drains the bar extremely slowly
-            if (elapsedTime > 0)
+            if (elapsed > 0)
             {
-                oxygenMeter.fillAmount -= 0.01f / 3 * Time.deltaTime;
-            }
-        }
+                oxygenMeter.fillAmount -= 0.0001f;
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StopTimer();
+                elapsedTime += Time.deltaTime;
+
+                int minutes = Mathf.FloorToInt(elapsedTime / 60);
+                int seconds = Mathf.FloorToInt(elapsedTime % 60);
+
+                timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+                // Fix: Changed 'elapsed' to 'elapsedTime'
+                // Also: This logic currently drains the bar extremely slowly
+                if (elapsedTime > 0)
+                {
+                    oxygenMeter.fillAmount -= 0.01f * Time.deltaTime;
+
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                StopTimer();
+            }
         }
     }
 
@@ -111,6 +116,7 @@ public class Timer : MonoBehaviour
         }
     }
 
+
     public void MeterDecrease(int i)
     {
         oxygenMeterCurrentPercent -= i;
@@ -129,4 +135,5 @@ public class Timer : MonoBehaviour
     {
         oxygenMeter.fillAmount = oxygenMeterCurrentPercent / oxygenMeterMaxPercent;
     }
+
 }

@@ -54,10 +54,6 @@ public class PressurePlate : MonoBehaviour
             playerOnPad = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

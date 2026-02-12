@@ -13,6 +13,8 @@ public class UltimatePlatform : MonoBehaviour
     [SerializeField] public Transform pointB;
     [SerializeField] public float moveSpeed = 2f;
     [SerializeField] private Transform target;
+    [SerializeField] private Vector2 previousPosition;
+    [HideInInspector] public Vector2 moveDiff;
 
     public enum State
     {
@@ -22,12 +24,13 @@ public class UltimatePlatform : MonoBehaviour
     }
     private void Start()
     {
+        previousPosition = transform.position;
         if (isMovingPlatform && pointB!= null)
         {
             target = pointB;
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (isOn)
         {
@@ -67,6 +70,9 @@ public class UltimatePlatform : MonoBehaviour
                     target = pointA;
                 }
             }
+            Vector2 currentPos = transform.position;
+            moveDiff = currentPos - previousPosition;
+            previousPosition = currentPos;
         }
 
     }
@@ -138,23 +144,6 @@ public class UltimatePlatform : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.transform.SetParent(transform);
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
-    }
-
 
 
 }

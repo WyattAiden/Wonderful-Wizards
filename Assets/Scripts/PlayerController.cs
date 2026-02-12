@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField] public float respawnTimerMax;
 
+    [field: SerializeField] private UltimatePlatform currentPlatform;
+
 
 
     // Player input information
@@ -105,6 +107,11 @@ public class PlayerController : MonoBehaviour
     // Runs each phsyics update
     void FixedUpdate()
     {
+        if (currentPlatform != null)
+        {
+            rb2d.position += currentPlatform.moveDiff;
+        }
+
         if (dead)
         {
             respawnTimer += Time.deltaTime;
@@ -123,8 +130,6 @@ public class PlayerController : MonoBehaviour
 
         CheckJump();
 
-        // MOVE //NEED TO CHANGE THIS CODE
-        // Read the "Move" action value, which is a 2D vector
         Vector2 moveValue = InputActionMove.ReadValue<Vector2>();
 
         rb2d.linearVelocity = new Vector2
@@ -283,4 +288,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        UltimatePlatform platform = collision.gameObject.GetComponent<UltimatePlatform>();
+        if (platform != null && platform.isMovingPlatform)
+        {
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    currentPlatform = platform;
+                    return;
+                }
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        UltimatePlatform platform = collision.gameObject.GetComponent<UltimatePlatform>();
+        if (platform != null && platform == currentPlatform)
+        {
+            currentPlatform = null;
+        }
+    }
 }

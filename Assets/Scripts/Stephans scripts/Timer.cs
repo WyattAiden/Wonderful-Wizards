@@ -7,85 +7,126 @@ using System.Linq;
 
 public class Timer : MonoBehaviour
 {
-
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI leaderboardText;
-    private float startTime;
+    private float elapsedTime;
     private bool isRunning;
     private const string LeaderboardKey = "BestTimes";
+
+    public Image oxygenMeter;
+    public float oxygenMeterMaxPercent = 100f; // Set a default
+    private float oxygenMeterCurrentPercent;
 
     private List<float> bestTimes = new List<float>();
 
     void Start()
     {
-        LoadLeaderboardData();
-        StartTimer();
+        // Initialize Oxygen
+        oxygenMeterCurrentPercent = oxygenMeterMaxPercent;
 
+        LoadLeaderboardData();
+        DisplayLeaderboard(); // Show the board at the start
+        StartTimer();
     }
 
     void Update()
     {
-       if (isRunning)
+        if (isRunning)
         {
-            float elapsed = Time.time - startTime;
-            timerText.text = $"time: {elapsed:F2}s";
+            elapsedTime += Time.deltaTime;
+
+            int minutes = Mathf.FloorToInt(elapsedTime / 60);
+            int seconds = Mathf.FloorToInt(elapsedTime % 60);
+
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+            // Fix: Changed 'elapsed' to 'elapsedTime'
+            // Also: This logic currently drains the bar extremely slowly
+            if (elapsedTime > 0)
+            {
+                oxygenMeter.fillAmount -= 0.01f * Time.deltaTime;
+            }
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StopTimer();
+        }
     }
 
     public void StartTimer()
     {
-        startTime = Time.time;
+        elapsedTime = 0f;
         isRunning = true;
     }
+
     public void StopTimer()
     {
+        if (!isRunning) return;
 
         isRunning = false;
-        float finalTime = Time.time - startTime;
-        SaveTime(finalTime);
-        DisplayLeaderboard();
+
+        // Fix: Added the call to SaveTime so the leaderboard updates!
+        SaveTime(elapsedTime);
+
+        PlayerPrefs.SetFloat("lastRecordedTime", elapsedTime);
+        PlayerPrefs.Save();
     }
+
     private void LoadLeaderboardData()
     {
-
         string savedData = PlayerPrefs.GetString(LeaderboardKey, "");
         if (!string.IsNullOrEmpty(savedData))
         {
             bestTimes = savedData.Split(',')
+                .Where(s => !string.IsNullOrEmpty(s)) // Safety check
                 .Select(float.Parse)
                 .ToList();
-
         }
     }
 
-
-
-    private void SaveTime( float time)
+    private void SaveTime(float time)
     {
-        List<float> bestTime = PlayerPrefs.GetString(LeaderboardKey, "")
-            .Split(',')
-            .Where(s => float.TryParse(s, out _))
-            .Select(float.Parse)
-            .ToList();
-
         bestTimes.Add(time);
         bestTimes.Sort();
+
         if (bestTimes.Count > 5) bestTimes.RemoveRange(5, bestTimes.Count - 5);
 
         PlayerPrefs.SetString(LeaderboardKey, string.Join(",", bestTimes));
         PlayerPrefs.Save();
-    }
 
+        DisplayLeaderboard();
+    }
 
     public void DisplayLeaderboard()
     {
-        string[] times = PlayerPrefs.GetString(LeaderboardKey, "").Split(',');
-        leaderboardText.text = "Top Times:/n";
-        for (int i = 0; i <times.Length; i++)
+        if (leaderboardText == null) return;
+
+        leaderboardText.text = "Best Times:\n";
+        for (int i = 0; i < bestTimes.Count; i++)
         {
-            leaderboardText.text += $"{i + 1}. {float.Parse(times[i]):F2}s/n";
+            int minutes = Mathf.FloorToInt(bestTimes[i] / 60);
+            int seconds = Mathf.FloorToInt(bestTimes[i] % 60);
+            leaderboardText.text += string.Format("{0}. {1:00}:{2:00}\n", i + 1, minutes, seconds);
         }
     }
 
+    public void MeterDecrease(int i)
+    {
+        oxygenMeterCurrentPercent -= i;
+        if (oxygenMeterCurrentPercent < 0) oxygenMeterCurrentPercent = 0;
+        UpdateOxygenUI();
+    }
+
+    public void MeterIncrease(int i)
+    {
+        oxygenMeterCurrentPercent += i;
+        if (oxygenMeterCurrentPercent > oxygenMeterMaxPercent) oxygenMeterCurrentPercent = oxygenMeterMaxPercent;
+        UpdateOxygenUI();
+    }
+
+    private void UpdateOxygenUI()
+    {
+        oxygenMeter.fillAmount = oxygenMeterCurrentPercent / oxygenMeterMaxPercent;
+    }
 }

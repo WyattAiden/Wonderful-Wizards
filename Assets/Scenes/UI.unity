@@ -856,11 +856,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1021106569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4968edc897b09e34a8bfb9d615dabc77, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b540999a4de0fc49ba8d16de7e6491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerText: {fileID: 1830209678}
+  leaderboardText: {fileID: 0}
   oxygenMeter: {fileID: 1743892684}
-  oxygenMeterMaxPercent: 100
+  oxygenMeterMaxPercent: 600
 --- !u!1 &1283690299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,8 +1224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.89, y: 3.449}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 4.3434, y: 3.449}
+  m_SizeDelta: {x: 348.7898, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830209678
 MonoBehaviour:
@@ -1311,7 +1313,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 94.347466, w: 0}
+  m_margin: {x: 0, y: 0, z: 3.6465569, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

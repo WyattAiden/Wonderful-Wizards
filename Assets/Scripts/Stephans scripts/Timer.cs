@@ -16,10 +16,18 @@ public class Timer : MonoBehaviour
 
     private List<float> bestTimes = new List<float>();
 
+    public Image oxygenMeter;
+
+    public float oxygenMeterMaxPercent;
+
+    private float oxygenMeterCurrentPercent;
     void Start()
     {
         LoadLeaderboardData();
         StartTimer();
+
+        oxygenMeterCurrentPercent = oxygenMeterMaxPercent;
+        oxygenMeter.fillAmount = 1;
 
     }
 
@@ -29,6 +37,11 @@ public class Timer : MonoBehaviour
         {
             float elapsed = Time.time - startTime;
             timerText.text = $"time: {elapsed:F2}s";
+
+            if (elapsed > 0)
+            {
+                oxygenMeter.fillAmount -= 0.0001f;
+            }
         }
 
     }
@@ -86,6 +99,30 @@ public class Timer : MonoBehaviour
         {
             leaderboardText.text += $"{i + 1}. {float.Parse(times[i]):F2}s/n";
         }
+    }
+
+    public void MeterDecrease(float i)
+    {
+        oxygenMeterCurrentPercent -= i;
+
+        if (oxygenMeterCurrentPercent < 0)
+        {
+            oxygenMeterCurrentPercent = 0;
+        }
+
+        oxygenMeter.fillAmount = (float)oxygenMeterCurrentPercent / oxygenMeterMaxPercent;
+    }
+
+    public void MeterIncrease(float i)
+    {
+        oxygenMeterCurrentPercent += i;
+
+        if (oxygenMeterCurrentPercent < 0)
+        {
+            oxygenMeterCurrentPercent = 0;
+        }
+
+        oxygenMeter.fillAmount = (float)oxygenMeterCurrentPercent / oxygenMeterMaxPercent;
     }
 
 }

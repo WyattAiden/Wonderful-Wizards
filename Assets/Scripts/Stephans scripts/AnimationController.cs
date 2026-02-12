@@ -4,12 +4,14 @@ public class AnimationController : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb2d;
+    public PlayerController playerController;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        player  = GetComponent<PlayerController>();
     }
 
 
@@ -21,19 +23,8 @@ public class AnimationController : MonoBehaviour
 
 
 
-        bool isGrounded = Mathf.Abs(rb2d.linearVelocity.y) < 0.01f;
-        anim.SetBool("IsGrounded", isGrounded);
-
-        FlipSprite(rb2d.linearVelocity.x);
+        if (playerController.isGrounded) anim.SetBool("IsGrounded", isGrounded);
 
     }
 
-    void FlipSprite(float moveX)
-    {
-        if (moveX > 0.01f)
-            transform.localScale = new Vector3(1, 1, 1);
-        else if (moveX < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
-
-    }
 }

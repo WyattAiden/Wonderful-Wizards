@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CameraAverage : MonoBehaviour
 {
-    public bool isMirror;
     public Transform[] playerTransforms = new Transform[3];
 
     private void Update()
@@ -13,10 +12,8 @@ public class CameraAverage : MonoBehaviour
             int i = 0;
             foreach (PlayerController player in GameMan.Players)
             {
-                Debug.Log("Is player a Gameman?");
-                if (player.isMirror)
+                if (!player.isMirror)
                 {
-                    Debug.Log("Is player mirror?");
                     playerTransforms[i] = player.transform;
 
                     i++;
@@ -44,10 +41,6 @@ public class CameraAverage : MonoBehaviour
                     -10
                     );
             }
-            else
-            {
-                Debug.Log("i outside of expected range");
-            }
             i = 0;
         }
         else if (gameObject.name == "Display2 Camera")
@@ -55,7 +48,7 @@ public class CameraAverage : MonoBehaviour
             int i = 0;
             foreach (PlayerController player in GameMan.Players)
             {
-                if (!player.isMirror)
+                if (player.isMirror)
                 {
                     playerTransforms[i] = player.transform;
 
@@ -83,10 +76,6 @@ public class CameraAverage : MonoBehaviour
                     (GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y + GameMan.Players[i + 1].transform.position.y) / 3,
                     -10
                     );
-            }
-            else
-            {
-                Debug.Log("i outside of expected range");
             }
             i = 0;
         }

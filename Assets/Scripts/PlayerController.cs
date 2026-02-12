@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public SpriteRenderer spriteRenderer { get; private set; }
     [field: SerializeField] public Rigidbody2D rb2d { get; private set; }
     [field: SerializeField] public float moveSpeed { get; private set; } = 10f;
-    [field: SerializeField] public bool isMirror { get; private set; } = false;
+    [field: SerializeField] public bool isMirror = false;
 
     [Header("Jump Things")] //This adds a text header above a section
     [field: SerializeField] public float jumpHeight { get; private set; } = 5f;

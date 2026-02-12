@@ -263,6 +263,11 @@ MonoBehaviour:
   <inInteractRange>k__BackingField: 0
   <interactTarget>k__BackingField: {fileID: 0}
   <dead>k__BackingField: 0
+  itemHolding: {fileID: 0}
+  respawnPOS: {fileID: 0}
+  respawnTimer: 0
+  respawnTimerMax: 0
+  currentPlatform: {fileID: 0}
 --- !u!50 &3752404572598628836
 Rigidbody2D:
   serializedVersion: 5
@@ -370,5 +375,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 3.5, y: 3.5}
   m_EdgeRadius: 0

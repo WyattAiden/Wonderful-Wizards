@@ -42,7 +42,7 @@ public class ConfigureDisplays : MonoBehaviour
         {
             string msg = $"Could not detect at least one secondary display.";
             Debug.LogError(msg);
-            DisplayText1.text = msg;
+            //DisplayText1.text = msg;
             return;
         }
 
@@ -57,6 +57,6 @@ public class ConfigureDisplays : MonoBehaviour
             $"Display {displayIndex + 1}\n" +
             $"Rendering({display.renderingWidth}, {display.renderingHeight})\n" +
             $"System({display.systemWidth}, {display.systemHeight})";
-        displayText.text = msg;
+        //displayText.text = msg;
     }
 }

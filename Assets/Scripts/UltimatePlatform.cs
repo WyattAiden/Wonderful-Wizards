@@ -1,19 +1,32 @@
 using UnityEngine;
 
-public class EnablingPlatform : MonoBehaviour
+public class UltimatePlatform : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Collider2D Collider;
     [SerializeField] public bool isOn = false;
     [SerializeField] private State currentState = State.Triangle;
     [SerializeField] public bool isBallPlatform = true;
+
+    [SerializeField] public bool isMovingPlatform;
+    [SerializeField, Header("Moving Platform Settings")] public Transform pointA;
+    [SerializeField] public Transform pointB;
+    [SerializeField] public float moveSpeed = 2f;
+    [SerializeField] private Transform target;
+
     public enum State
     {
         Triangle,
         Square,
         Circle
     }
-
+    private void Start()
+    {
+        if (isMovingPlatform && pointB!= null)
+        {
+            target = pointB;
+        }
+    }
     private void Update()
     {
         if (isOn)
@@ -26,6 +39,34 @@ public class EnablingPlatform : MonoBehaviour
         { 
             Collider.enabled = false;
             SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 0.3f);
+        }
+
+        if (isMovingPlatform)
+        {
+            if (pointA == null || pointB == null)
+            {
+                Debug.Log("Point A/Point B on" + gameObject.name + "is null, assign A/B");
+                return;
+            }
+
+            transform.position = Vector2.MoveTowards
+            (
+            transform.position,
+            target.position,
+            moveSpeed * Time.deltaTime
+            );
+
+            if (Vector2.Distance(transform.position, target.position) < 0.05f)
+            {
+                if (target == pointA)
+                {
+                    target = pointB;
+                }
+                else
+                {
+                    target = pointA;
+                }
+            }
         }
 
     }
@@ -97,4 +138,23 @@ public class EnablingPlatform : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
+
+
+
 }

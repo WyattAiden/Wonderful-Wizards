@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public EnablingPlatform linkedPlatform;
+    public UltimatePlatform linkedPlatform;
     [SerializeField, Tooltip("2nd platform only necessary for 1 puzzle")]
-    public EnablingPlatform linkedPlatform2;
+    public UltimatePlatform linkedPlatform2;
     public bool flipsGravity;
     private bool playerOnPad;
     public float activationTimer = 0;

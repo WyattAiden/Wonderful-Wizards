@@ -14,6 +14,10 @@ public class GravityFlip : MonoBehaviour, EventInterface
         foreach (PlayerController Player in Players) 
         {
             Player.FlipToes();
+
+            transform.Rotate(0f, 0f, 180f);
+
+            player.rb2d.linearVelocityY = 0;
         }
         Debug.Log("Gravity Flipped");
     }

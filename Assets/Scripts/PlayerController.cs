@@ -60,7 +60,10 @@ public class PlayerController : MonoBehaviour
         else
             spriteRenderer.color = color;
     }
-
+    void Awake()
+    {
+        GameMan.Players.Add(this);
+    }
     // Set up player input
     public void AssignPlayerInputDevice(PlayerInput playerInput)
     {
@@ -226,6 +229,16 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
+    public void FlipIndividualGravity()
+    {
+        rb2d.gravityScale *= -1f;
+
+        FlipToes();
+
+        transform.Rotate(0f, 0f, 180f);
+
+        rb2d.linearVelocityY = 0;
+    }
 
     //Built-in function to draw debug elements such as lines, wire spheres and cubes
     private void OnDrawGizmos()

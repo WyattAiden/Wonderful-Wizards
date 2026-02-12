@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour, EventInterface
 {
+    public bool isMirror = false;
     public bool isPickedUp = false;
 
     public void OnInteract(PlayerController player)
     {
         if (isPickedUp == false)
         {
+            GravBall gravball = GetComponent<GravBall>();
+            if (gravball != null)
+            {
+                gravball.flipSideGravity(player);
+            }
+
             Debug.Log(player.name + player.playerNumber + " picked up " + gameObject.name);
 
             transform.SetParent(player.transform); //Parent object to player
@@ -29,11 +36,17 @@ public class Pickup : MonoBehaviour, EventInterface
 
             player.itemHolding = this;
             isPickedUp = true;
-            
+
         }
 
         else
         {
+            GravBall gravball = GetComponent<GravBall>();
+            if (gravball != null)
+            {
+                gravball.flipSideGravity(player);
+            }
+
             Debug.Log(player.name + player.playerNumber + " dropped " + gameObject.name);
 
             transform.SetParent(null); //Parent object to player
@@ -59,6 +72,14 @@ public class Pickup : MonoBehaviour, EventInterface
     }
     public void SendThroughHole(GameObject pairedHole, PlayerController Player)
     {
+        GravBall gravball = GetComponent<GravBall>();
+        if (gravball != null)
+        {
+            gravball.flipSideGravity(Player);
+        }
+
+        isMirror = !isMirror; 
+
         transform.SetParent(null); //Parent object to player
 
         transform.localPosition = pairedHole.transform.position;

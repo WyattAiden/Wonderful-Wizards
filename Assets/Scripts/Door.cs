@@ -1,6 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 public class Door : MonoBehaviour, EventInterface
 {
+    public CanvasGroup winScreen;
+
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Collider2D Collider;
     [SerializeField] private bool isOn = true;
@@ -16,9 +19,22 @@ public class Door : MonoBehaviour, EventInterface
         }
         if (isWinDoor)
         {
+
             if (keysToUnlock <= 0)
             {
                 OpenDoor();
+
+                winScreen.alpha = 1;
+
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    keysToUnlock = 3;
+                }
+
+            }
+            else
+            {
+                winScreen.alpha = 0;
             }
         }
     }

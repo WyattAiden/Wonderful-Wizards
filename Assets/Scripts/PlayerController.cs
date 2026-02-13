@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     [field: SerializeField] private UltimatePlatform currentPlatform;
 
-
+    public Animator animator;
 
     // Player input information
     private PlayerInput PlayerInput;
@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
     private InputAction InputActionInteract;
 
     // Assign color value on spawn from main spawner
+    void awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     public void AssignColor(Color color)
     {
         // record color
@@ -85,6 +89,7 @@ public class PlayerController : MonoBehaviour
     // Runs each frame
     public void Update()
     {
+
         // Read the "Jump" action state, which is a boolean value
         if (InputActionJump.WasPressedThisFrame())
         {

@@ -1,28 +1,35 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class AppleMonster : MonoBehaviour
+public class AppleMonster : MonoBehaviour, EventInterface
 {
     public int applesToEat = 3;
     public GameObject water;
     private float deathTimer = 0;
     public float deathDuration = 1f;
     private bool isDead;
+
+    public ParticleSystem eatParticles;
     AudioManager audioManager;
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnInteract(PlayerController player)
     {
-        if (collision.gameObject.name == "Apple" || collision.gameObject.name == "Apple (1)" 
-        || collision.gameObject.name == "Apple (2)" || collision.gameObject.name == "Apple (3)")
+        if (player.itemHolding != null && player.itemHolding.name == "Apple(Clone)")
         {
             applesToEat -= 1;
             Debug.Log("Apple Eaten");
-            Destroy(collision.gameObject);
-            
+            Destroy(player.itemHolding);
+            player.itemHolding = null;
+            eatParticles.Play();
+        }
+        else
+        {
+            player.dead = true;
+            eatParticles.Play();
         }
         audioManager.PlaySFX(audioManager.MonApEat);
     }

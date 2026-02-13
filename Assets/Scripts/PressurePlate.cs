@@ -7,6 +7,7 @@ public class PressurePlate : MonoBehaviour
     public UltimatePlatform linkedPlatform2;
     public bool flipsGravity;
     private bool playerOnPad;
+    public bool turnsOff = false;
     public float activationTimer = 0;
     private PlayerController playerController;
     private bool hasTriggered = false;
@@ -25,12 +26,19 @@ public class PressurePlate : MonoBehaviour
 
         if (activationTimer >= activationTimerMax && !hasTriggered)
         {
-            if (linkedPlatform != null)
+            if (turnsOff & linkedPlatform != null)
+            {
+                linkedPlatform.isOn = false;
+            }
+            else if (linkedPlatform != null)
             {
                 linkedPlatform.isOn = true;
             }
-
-            if (linkedPlatform2 != null)
+            if (turnsOff & linkedPlatform2 != null)
+            {
+                linkedPlatform2.isOn = false;
+            }
+            else if (linkedPlatform2 != null)
             {
                 linkedPlatform2.isOn = true;
             }

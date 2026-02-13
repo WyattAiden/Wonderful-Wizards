@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3752404572598628836}
   - component: {fileID: 5016796433398627693}
   - component: {fileID: 1744776395870552870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   <spriteRenderer>k__BackingField: {fileID: 2500016798255280548}
   <rb2d>k__BackingField: {fileID: 3752404572598628836}
   <moveSpeed>k__BackingField: 8
-  <isMirror>k__BackingField: 0
+  isMirror: 0
   <jumpHeight>k__BackingField: 10
   <fallMultiplier>k__BackingField: 4
   <lowJumpMultiplier>k__BackingField: 2
@@ -262,7 +262,7 @@ MonoBehaviour:
   <groundCheckRay>k__BackingField: 0.25
   <inInteractRange>k__BackingField: 0
   <interactTarget>k__BackingField: {fileID: 0}
-  <dead>k__BackingField: 0
+  dead: 0
   itemHolding: {fileID: 0}
   respawnPOS: {fileID: 0}
   respawnTimer: 0
@@ -375,5 +375,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.5, y: 3.5}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0

@@ -93,9 +93,15 @@ public class PlayerController : MonoBehaviour
             HandleJump();
         }
 
+        //This part controls the pickup logic/it's sending, it send a message through an interface to a pickup script to pickup objects
         if (InputActionInteract.WasPressedThisFrame())
         {
-            if (inInteractRange && interactTarget!= null)
+            if (inInteractRange && interactTarget.GetComponent<Pickup>() != null && itemHolding != null)
+            {
+                AreaInteract interact = itemHolding.GetComponent<AreaInteract>();
+                interact.TriggerSwitch(this);
+            }
+            else if (inInteractRange && interactTarget!= null)
             {
                 interactTarget.TriggerSwitch(this);
             }

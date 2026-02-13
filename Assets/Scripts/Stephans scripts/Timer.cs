@@ -17,6 +17,8 @@ public class Timer : MonoBehaviour
     public float oxygenMeterMaxPercent = 100f; // Set a default
     private float oxygenMeterCurrentPercent;
 
+    public CanvasGroup deathScreen;
+
     private List<float> bestTimes = new List<float>();
 
     void Start()
@@ -45,6 +47,11 @@ public class Timer : MonoBehaviour
             if (elapsedTime > 0)
             {
                 oxygenMeter.fillAmount -= 0.01f / 3 * Time.deltaTime;
+
+                if (oxygenMeter.fillAmount <= 0)
+                {
+                    deathScreen.alpha = 1;
+                }
             }
         }
 

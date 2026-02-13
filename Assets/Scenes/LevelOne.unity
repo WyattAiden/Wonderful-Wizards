@@ -3952,6 +3952,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2096251197}
     m_Modifications:
+    - target: {fileID: 5043345870784854945, guid: 98e456dbae35eb942a7445dc13680cd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7917832969640512719, guid: 98e456dbae35eb942a7445dc13680cd1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.862162
@@ -4788,7 +4792,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.34901962, g: 0.40000004, b: 0.86274517, a: 1}
   m_FlipX: 0
@@ -12657,7 +12661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12715,6 +12719,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1056266996}
   targetPrefab: {fileID: 8459152251639511751, guid: bd331d9478929e14b8817e2959bee30f, type: 3}
+  canSpawn: 0
+--- !u!1 &779945107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779945108}
+  - component: {fileID: 779945109}
+  m_Layer: 0
+  m_Name: Apple Regenerator (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779945108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779945107}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.39, y: 6.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2096251197}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779945109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779945107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711c20fb9699bba498d74346cb888b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetPrefab: {fileID: 6665002270545556800, guid: 5fac8904c5cdac949bf5a5cf6c75fcd1, type: 3}
+  canSpawn: 0
 --- !u!1 &785837271
 GameObject:
   m_ObjectHideFlags: 0
@@ -17168,6 +17220,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2062446815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1296460960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296460961}
+  - component: {fileID: 1296460962}
+  m_Layer: 0
+  m_Name: Apple Regenerator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296460961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296460960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.07, y: 6.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2096251197}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1296460962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296460960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711c20fb9699bba498d74346cb888b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetPrefab: {fileID: 6665002270545556800, guid: 5fac8904c5cdac949bf5a5cf6c75fcd1, type: 3}
+  canSpawn: 0
 --- !u!1 &1296524586
 GameObject:
   m_ObjectHideFlags: 0
@@ -23392,6 +23491,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 322560457}
     - target: {fileID: 3331380234130272730, guid: 27de2ecf957071740aa187e5aa27a893, type: 3}
+      propertyPath: appleRe
+      value: 
+      objectReference: {fileID: 1903532842}
+    - target: {fileID: 3331380234130272730, guid: 27de2ecf957071740aa187e5aa27a893, type: 3}
+      propertyPath: appleRe2
+      value: 
+      objectReference: {fileID: 1296460962}
+    - target: {fileID: 3331380234130272730, guid: 27de2ecf957071740aa187e5aa27a893, type: 3}
+      propertyPath: appleRe3
+      value: 
+      objectReference: {fileID: 779945109}
+    - target: {fileID: 3331380234130272730, guid: 27de2ecf957071740aa187e5aa27a893, type: 3}
       propertyPath: pourDuration
       value: 4
       objectReference: {fileID: 0}
@@ -23664,6 +23775,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6640855570452426341, guid: 2fc6f78b158f033459829e8640dd47a2, type: 3}
   m_PrefabInstance: {fileID: 1899126379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1903532840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903532841}
+  - component: {fileID: 1903532842}
+  m_Layer: 0
+  m_Name: Apple Regenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1903532841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903532840}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.8, y: 6.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2096251197}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903532842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903532840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711c20fb9699bba498d74346cb888b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetPrefab: {fileID: 6665002270545556800, guid: 5fac8904c5cdac949bf5a5cf6c75fcd1, type: 3}
+  canSpawn: 0
 --- !u!1 &1905531066
 GameObject:
   m_ObjectHideFlags: 0
@@ -24178,6 +24336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1564567648}
   targetPrefab: {fileID: 8459152251639511751, guid: bd331d9478929e14b8817e2959bee30f, type: 3}
+  canSpawn: 0
 --- !u!1001 &2014756731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25175,6 +25334,9 @@ Transform:
   - {fileID: 1447671237}
   - {fileID: 168899385}
   - {fileID: 891947558}
+  - {fileID: 1903532841}
+  - {fileID: 1296460961}
+  - {fileID: 779945108}
   m_Father: {fileID: 1518532602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119034758

@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 967872232884262645}
   - component: {fileID: 3630080901081270581}
   - component: {fileID: 5756487086426874358}
+  - component: {fileID: 4377287742261856581}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Interactable
@@ -266,4 +267,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54399344a65ebc44abd2b0b6946f208c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMirror: 0
   isPickedUp: 0
+--- !u!114 &4377287742261856581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6665002270545556800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c21ef5a06740645b320cb6434caeb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -10,6 +10,10 @@ public class SpawnApples : MonoBehaviour, EventInterface
     public float pourDuration = 1f;
     public bool timeToTick = false;
 
+    public MustExist appleRe;
+    public MustExist appleRe2;
+    public MustExist appleRe3;
+
     public ParticleSystem waterParticles;
     public void OnInteract(PlayerController player)
     {
@@ -29,13 +33,30 @@ public class SpawnApples : MonoBehaviour, EventInterface
             {
 
                 Vector3 spawnOffset = new Vector3((i * appleSpacing) - appleSpacing, 0f, 0f);
-                Instantiate
+                GameObject spawnedApple = Instantiate
                     (
                     applePrefab,
                     tree.position + spawnOffset,
                     Quaternion.identity
                     );
+
+                if (i == 0)
+                {
+                    appleRe.target = spawnedApple;
+                    appleRe.canSpawn = true;
+                }
+                else if (i == 1)
+                {
+                    appleRe2.target = spawnedApple;
+                    appleRe2.canSpawn = true;
+                }
+                else if (i == 2)
+                {
+                    appleRe3.target = spawnedApple;
+                    appleRe3.canSpawn = true;
+                }
             }
+
             hasSpawned = true;
 
             timeToTick = false;

@@ -17,7 +17,7 @@ public class AppleMonster : MonoBehaviour, EventInterface
         {
             applesToEat -= 1;
             Debug.Log("Apple Eaten");
-            Destroy(player.itemHolding);
+            Destroy(player.itemHolding.gameObject);
             player.itemHolding = null;
             eatParticles.Play();
         }

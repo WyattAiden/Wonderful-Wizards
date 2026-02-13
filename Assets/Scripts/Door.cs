@@ -6,6 +6,11 @@ public class Door : MonoBehaviour, EventInterface
     [SerializeField] private bool isOn = true;
     [SerializeField] public bool isWinDoor;
     [SerializeField, Tooltip("Only needs to be defined for win door")] public int keysToUnlock = 3;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Update()
     {
@@ -19,6 +24,7 @@ public class Door : MonoBehaviour, EventInterface
             if (keysToUnlock <= 0)
             {
                 OpenDoor();
+                
             }
         }
     }
@@ -33,6 +39,7 @@ public class Door : MonoBehaviour, EventInterface
             Debug.Log("Door opened with key");
 
             OpenDoor();
+            audioManager.PlaySFX(audioManager.DoorOpen);
         }
 
         else if (key != null && isWinDoor)
@@ -40,12 +47,15 @@ public class Door : MonoBehaviour, EventInterface
             keysToUnlock-= 1;
             Debug.Log(keysToUnlock + " more keys are needed to unlock the door");
             Destroy(player.itemHolding);
+            audioManager.PlaySFX(audioManager.DoorOpen);
         }
 
         else
         {
             Debug.Log("Item Held Is Not Key");
+           
         }
+        
     }
 
     void OpenDoor()

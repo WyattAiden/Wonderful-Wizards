@@ -8,7 +8,11 @@ public class AppleMonster : MonoBehaviour
     private float deathTimer = 0;
     public float deathDuration = 1f;
     private bool isDead;
-
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,7 +22,9 @@ public class AppleMonster : MonoBehaviour
             applesToEat -= 1;
             Debug.Log("Apple Eaten");
             Destroy(collision.gameObject);
+            
         }
+        audioManager.PlaySFX(audioManager.MonApEat);
     }
 
     private void Update()

@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 210faa9035a46294e9e4e6e4fe314952
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4371316611600343720
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_0
+  - first:
+      213: 6171864429480923397
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_1
+  - first:
+      213: -5670472017188439704
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_2
+  - first:
+      213: -6365356131335667976
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_3
+  - first:
+      213: -1324055167737676034
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_4
+  - first:
+      213: -7531664950867910460
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_5
+  - first:
+      213: -5388112221988465257
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_6
+  - first:
+      213: -5024641234056595165
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_7
+  - first:
+      213: 7174152361823355839
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_8
+  - first:
+      213: -2050932534433103989
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_9
+  - first:
+      213: 398811546913779418
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_10
+  - first:
+      213: -1000217162163537578
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_11
+  - first:
+      213: -3440545228984936929
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_12
+  - first:
+      213: -2171437599581543426
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_13
+  - first:
+      213: -5233907973067004634
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_14
+  - first:
+      213: 4944278243572160201
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_15
+  - first:
+      213: 4763029597104268403
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_16
+  - first:
+      213: -6544280489324217052
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_17
+  - first:
+      213: -4873542466859077901
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_18
+  - first:
+      213: -4484298444587186060
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_19
+  - first:
+      213: -2255785444476248511
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_20
+  - first:
+      213: 7423230100491617367
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_21
+  - first:
+      213: 2493090945604742538
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_22
+  - first:
+      213: -4399393025546774985
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_23
+  - first:
+      213: 6549793042124172601
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_24
+  - first:
+      213: 8912816440308836485
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_25
+  - first:
+      213: -2401709248461518237
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_26
+  - first:
+      213: 4574862396884183823
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_27
+  - first:
+      213: 5344794444782033840
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_28
+  - first:
+      213: 7563112973615465556
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_29
+  - first:
+      213: -2672143197602971002
+    second: W26 Design Week Sprite Sheet_Scrapped Stuff_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_0
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3953
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2e33b4c490aac30800000000000000
+      internalID: 4371316611600343720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_1
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 3778
+        width: 960
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5015419affdd6a550800000000000000
+      internalID: 6171864429480923397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_2
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 3935
+        width: 19
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869b0ba6ebf6e41b0800000000000000
+      internalID: -5670472017188439704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_3
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 3938
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fef1ead256b9a7a0800000000000000
+      internalID: -6365356131335667976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_4
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 3930
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efeb9ff07d200ade0800000000000000
+      internalID: -1324055167737676034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_5
+      rect:
+        serializedVersion: 2
+        x: 3283
+        y: 3907
+        width: 62
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c02244b1a62a7790800000000000000
+      internalID: -7531664950867910460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_6
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3737
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795df664b749935b0800000000000000
+      internalID: -5388112221988465257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_7
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 2814
+        width: 993
+        height: 1093
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329b6485b63e44ab0800000000000000
+      internalID: -5024641234056595165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_8
+      rect:
+        serializedVersion: 2
+        x: 3341
+        y: 3874
+        width: 82
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3c2031095bf8360800000000000000
+      internalID: 7174152361823355839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_9
+      rect:
+        serializedVersion: 2
+        x: 3417
+        y: 3845
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fb2dae9bf9983e0800000000000000
+      internalID: -2050932534433103989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_10
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 3420
+        width: 956
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adeae1a2dfcd88500800000000000000
+      internalID: 398811546913779418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_11
+      rect:
+        serializedVersion: 2
+        x: 3497
+        y: 3728
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6593ef65ac38e12f0800000000000000
+      internalID: -1000217162163537578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_12
+      rect:
+        serializedVersion: 2
+        x: 3536
+        y: 3693
+        width: 68
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1610b0d75ab040d0800000000000000
+      internalID: -3440545228984936929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_13
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3533
+        width: 831
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3e30902018dd1e0800000000000000
+      internalID: -2171437599581543426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_14
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3299
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625a14ecd6c6d57b0800000000000000
+      internalID: -5233907973067004634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_15
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 3062
+        width: 931
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c69fcaddda9d9440800000000000000
+      internalID: 4944278243572160201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_16
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 3083
+        width: 831
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3746216de2ea91240800000000000000
+      internalID: 4763029597104268403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_17
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 3220
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d7f4b619b0e25a0800000000000000
+      internalID: -6544280489324217052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_18
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2862
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe651192f2bd5cb0800000000000000
+      internalID: -4873542466859077901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_19
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 2712
+        width: 931
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4784b8fc25294c1c0800000000000000
+      internalID: -4484298444587186060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_20
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 2866
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e1f740717d1b0e0800000000000000
+      internalID: -2255785444476248511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_21
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2624
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7544ac9427c940760800000000000000
+      internalID: 7423230100491617367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_22
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 2353
+        width: 898
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d638d810d399220800000000000000
+      internalID: 2493090945604742538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_23
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2404
+        width: 831
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73614fc2a5732f2c0800000000000000
+      internalID: -4399393025546774985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_24
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2179
+        width: 831
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93de22cc11a85ea50800000000000000
+      internalID: 6549793042124172601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_25
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1999
+        width: 893
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588aed0945fa0bb70800000000000000
+      internalID: 8912816440308836485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_26
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1970
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a4eafc92a6baed0800000000000000
+      internalID: -2401709248461518237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_27
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1762
+        width: 832
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0be29e7c1d2d7f30800000000000000
+      internalID: 4574862396884183823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_28
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1645
+        width: 857
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbd6b6ca368c2a40800000000000000
+      internalID: 5344794444782033840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_29
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1549
+        width: 832
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4548f7cad2395f860800000000000000
+      internalID: 7563112973615465556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W26 Design Week Sprite Sheet_Scrapped Stuff_30
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 1341
+        width: 831
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68206ed5be3aaead0800000000000000
+      internalID: -2672143197602971002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      W26 Design Week Sprite Sheet_Scrapped Stuff_0: 4371316611600343720
+      W26 Design Week Sprite Sheet_Scrapped Stuff_1: 6171864429480923397
+      W26 Design Week Sprite Sheet_Scrapped Stuff_10: 398811546913779418
+      W26 Design Week Sprite Sheet_Scrapped Stuff_11: -1000217162163537578
+      W26 Design Week Sprite Sheet_Scrapped Stuff_12: -3440545228984936929
+      W26 Design Week Sprite Sheet_Scrapped Stuff_13: -2171437599581543426
+      W26 Design Week Sprite Sheet_Scrapped Stuff_14: -5233907973067004634
+      W26 Design Week Sprite Sheet_Scrapped Stuff_15: 4944278243572160201
+      W26 Design Week Sprite Sheet_Scrapped Stuff_16: 4763029597104268403
+      W26 Design Week Sprite Sheet_Scrapped Stuff_17: -6544280489324217052
+      W26 Design Week Sprite Sheet_Scrapped Stuff_18: -4873542466859077901
+      W26 Design Week Sprite Sheet_Scrapped Stuff_19: -4484298444587186060
+      W26 Design Week Sprite Sheet_Scrapped Stuff_2: -5670472017188439704
+      W26 Design Week Sprite Sheet_Scrapped Stuff_20: -2255785444476248511
+      W26 Design Week Sprite Sheet_Scrapped Stuff_21: 7423230100491617367
+      W26 Design Week Sprite Sheet_Scrapped Stuff_22: 2493090945604742538
+      W26 Design Week Sprite Sheet_Scrapped Stuff_23: -4399393025546774985
+      W26 Design Week Sprite Sheet_Scrapped Stuff_24: 6549793042124172601
+      W26 Design Week Sprite Sheet_Scrapped Stuff_25: 8912816440308836485
+      W26 Design Week Sprite Sheet_Scrapped Stuff_26: -2401709248461518237
+      W26 Design Week Sprite Sheet_Scrapped Stuff_27: 4574862396884183823
+      W26 Design Week Sprite Sheet_Scrapped Stuff_28: 5344794444782033840
+      W26 Design Week Sprite Sheet_Scrapped Stuff_29: 7563112973615465556
+      W26 Design Week Sprite Sheet_Scrapped Stuff_3: -6365356131335667976
+      W26 Design Week Sprite Sheet_Scrapped Stuff_30: -2672143197602971002
+      W26 Design Week Sprite Sheet_Scrapped Stuff_4: -1324055167737676034
+      W26 Design Week Sprite Sheet_Scrapped Stuff_5: -7531664950867910460
+      W26 Design Week Sprite Sheet_Scrapped Stuff_6: -5388112221988465257
+      W26 Design Week Sprite Sheet_Scrapped Stuff_7: -5024641234056595165
+      W26 Design Week Sprite Sheet_Scrapped Stuff_8: 7174152361823355839
+      W26 Design Week Sprite Sheet_Scrapped Stuff_9: -2050932534433103989
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

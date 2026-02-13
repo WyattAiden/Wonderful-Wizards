@@ -80,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.24642926, g: 0.52252734, b: 0.93962264, a: 1}
+  m_Sprite: {fileID: -4973088527674372411, guid: e517a338003001d4f9ef90f13d3f9ba2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -178,4 +178,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54399344a65ebc44abd2b0b6946f208c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMirror: 0
   isPickedUp: 0

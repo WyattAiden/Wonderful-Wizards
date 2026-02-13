@@ -8,6 +8,9 @@ public class Teleporter : MonoBehaviour, EventInterface
     public float teleportDuration = 1f;
     public float playerSpacing = 1.5f;
     private PlayerController playerr;
+    public bool isYSetter = false;
+    public CameraAverage cam1;
+    public CameraAverage cam2;
 
     private void Awake()
     {
@@ -39,6 +42,11 @@ public class Teleporter : MonoBehaviour, EventInterface
                         i++;
                     }
                 }
+                if (isYSetter && cam2 != null)
+                {
+                    cam2.YReference = destination;
+                }
+
             }
             else
             {
@@ -54,6 +62,10 @@ public class Teleporter : MonoBehaviour, EventInterface
                             );
                         i++;
                     }
+                }
+                if (isYSetter && cam1 != null)
+                {
+                    cam1.YReference = destination;
                 }
             }
             timeToPort = false;

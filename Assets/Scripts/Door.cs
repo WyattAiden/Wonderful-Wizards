@@ -49,6 +49,7 @@ public class Door : MonoBehaviour, EventInterface
             Debug.Log("Door opened with key");
 
             OpenDoor();
+            Destroy(player.itemHolding);
         }
 
         else if (key != null && isWinDoor)

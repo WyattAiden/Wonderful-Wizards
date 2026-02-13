@@ -11,7 +11,31 @@ public class DissolveZone : MonoBehaviour
             {
                 foreach (Transform child in player.transform)
                 {
-                    if (child.name != "Feet")
+                    if (child.name == "GravBall")
+                    {
+                        Destroy(child.gameObject);
+                        if (player.isMirror)
+                        {
+                            foreach (PlayerController playah in GameMan.Players)
+                            {
+                                if (playah.isMirror)
+                                {
+                                    playah.FlipIndividualGravity();
+                                }
+                            }
+                        }
+                        else if (!player.isMirror)
+                        {
+                            foreach (PlayerController playah in GameMan.Players)
+                            {
+                                if (!playah.isMirror)
+                                {
+                                    playah.FlipIndividualGravity();
+                                }
+                            }
+                        }
+                    }
+                    else if (child.name != "Feet")
                     {
                         Destroy(child.gameObject);
                     }

@@ -162,3 +162,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedPlatform: {fileID: 0}
   linkedPlatform2: {fileID: 0}
+  enablesMovement: 0
+  enablesPlatform: 1

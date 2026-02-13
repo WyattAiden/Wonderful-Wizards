@@ -1,13 +1,15 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerAnimation : MonoBehaviour
 {
-    Animator anim;
-    Rigidbody2D rb;
-    PlayerController controller;
+    private Animator anim;
+    private Rigidbody2D rb;
+    private PlayerController controller;
 
     float moveTimer;
-    public float timeToRun = 0.8f; // how long before run starts
+    public float timeToRun = 0.7f;
 
     void Awake()
     {
@@ -24,16 +26,13 @@ public class PlayerAnimation : MonoBehaviour
         anim.SetFloat("YVelocity", rb.linearVelocity.y);
         anim.SetBool("IsGrounded", controller.isGrounded);
 
-        // running timer logic
+        // run delay logic
         if (speed > 0.1f && controller.isGrounded)
-        {
             moveTimer += Time.deltaTime;
-        }
         else
-        {
             moveTimer = 0f;
-        }
 
         anim.SetBool("IsRunning", moveTimer >= timeToRun);
     }
 }
+

@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
     private float oxygenMeterCurrentPercent;
 
     public CanvasGroup deathScreen;
+    public bool isDeathScreenVisible;
 
     private List<float> bestTimes = new List<float>();
 
@@ -48,9 +49,28 @@ public class Timer : MonoBehaviour
             {
                 oxygenMeter.fillAmount -= 0.01f / 3 * Time.deltaTime;
 
-                if (oxygenMeter.fillAmount <= 0)
+                if (isDeathScreenVisible)
                 {
                     deathScreen.alpha = 1;
+                }
+                else
+                {
+                    deathScreen.alpha = 0;
+                }
+
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    oxygenMeter.fillAmount = 1;
+                    elapsedTime = 0;
+                }
+
+                if (oxygenMeter.fillAmount <= 0)
+                {
+                    isDeathScreenVisible = true;
+                }
+                else
+                {
+                    isDeathScreenVisible = false;
                 }
             }
         }

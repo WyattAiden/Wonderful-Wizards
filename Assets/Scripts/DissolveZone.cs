@@ -9,9 +9,9 @@ public class DissolveZone : MonoBehaviour
             PlayerController player = collision.GetComponent<PlayerController>();
             player.itemHolding = null;
             {
-                foreach (GameObject child in player.transform)
+                foreach (Transform child in player.transform)
                 {
-                    if (child.gameObject.name != "Feet")
+                    if (child.name != "Feet")
                     {
                         Destroy(child.gameObject);
                     }

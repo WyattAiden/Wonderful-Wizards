@@ -4,10 +4,12 @@ using UnityEngine;
 public class CameraAverage : MonoBehaviour
 {
     public Transform[] playerTransforms = new Transform[3];
+    public Transform YReference;
+    public bool isMirror = false;
 
     private void Update()
     {
-        if (gameObject.name == "Display1 Camera")
+        if (!isMirror)
         {
             int i = 0;
             foreach (PlayerController player in GameMan.Players)
@@ -23,27 +25,27 @@ public class CameraAverage : MonoBehaviour
             if (i == 1)
             {
                 gameObject.transform.position = 
-                    new Vector3 (GameMan.Players[i-1].transform.position.x, GameMan.Players[i-1].transform.position.y, GameMan.Players[i - 1].transform.position.z - 10);
+                    new Vector3 (playerTransforms[0].transform.position.x, YReference.position.y, - 10);
             }
             else if (i == 2)
             {
                 gameObject.transform.position =
-                    new Vector3((GameMan.Players[i - 1].transform.position.x + GameMan.Players[i].transform.position.x) / 2,
-                    (GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y) / 2,
-                    -10
+                    new Vector3((playerTransforms[0].transform.position.x + playerTransforms[1].transform.position.x) / 2,
+                    YReference.position.y,//(GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y) / 2,
+                    - 10
                     );
             }
             else if (i == 3)
             {
                 gameObject.transform.position =
-                    new Vector3((GameMan.Players[i - 1].transform.position.x + GameMan.Players[i].transform.position.x + GameMan.Players[i + 1].transform.position.x) / 3,
-                    (GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y + GameMan.Players[i + 1].transform.position.y) / 3,
+                    new Vector3((playerTransforms[0].transform.position.x + playerTransforms[1].transform.position.x + playerTransforms[2].transform.position.x) / 3,
+                    YReference.position.y,//(GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y + GameMan.Players[i + 1].transform.position.y) / 3,
                     -10
                     );
             }
             i = 0;
         }
-        else if (gameObject.name == "Display2 Camera")
+        else if (isMirror)
         {
             int i = 0;
             foreach (PlayerController player in GameMan.Players)
@@ -59,21 +61,21 @@ public class CameraAverage : MonoBehaviour
             if (i == 1)
             {
                 gameObject.transform.position =
-                    new Vector3(GameMan.Players[i - 1].transform.position.x, GameMan.Players[i - 1].transform.position.y, GameMan.Players[i - 1].transform.position.z - 10);
-            }
+                    new Vector3(playerTransforms[0].transform.position.x, YReference.position.y, - 10);
+            }   
             else if (i == 2)
             {
                 gameObject.transform.position =
-                    new Vector3((GameMan.Players[i - 1].transform.position.x + GameMan.Players[i].transform.position.x) / 2,
-                    (GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y) / 2,
+                    new Vector3((playerTransforms[0].transform.position.x + playerTransforms[1].transform.position.x) / 2,
+                    YReference.position.y,
                     -10
                     );
             }
             else if (i == 3)
             {
                 gameObject.transform.position =
-                    new Vector3((GameMan.Players[i - 1].transform.position.x + GameMan.Players[i].transform.position.x + GameMan.Players[i + 1].transform.position.x) / 3,
-                    (GameMan.Players[i - 1].transform.position.y + GameMan.Players[i].transform.position.y + GameMan.Players[i + 1].transform.position.y) / 3,
+                    new Vector3((playerTransforms[0].transform.position.x + playerTransforms[1].transform.position.x + playerTransforms[2].transform.position.x) / 3,
+                    YReference.position.y,
                     -10
                     );
             }
@@ -81,7 +83,7 @@ public class CameraAverage : MonoBehaviour
         }
         else
         {
-            Debug.Log("Display Camera Name Wrong");
+            Debug.Log("isMirror Null");
         }
     }
 }

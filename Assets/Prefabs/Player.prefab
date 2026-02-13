@@ -262,7 +262,7 @@ MonoBehaviour:
   <groundCheckRay>k__BackingField: 0.25
   <inInteractRange>k__BackingField: 0
   <interactTarget>k__BackingField: {fileID: 0}
-  <dead>k__BackingField: 0
+  dead: 0
   itemHolding: {fileID: 0}
   respawnPOS: {fileID: 0}
   respawnTimer: 0

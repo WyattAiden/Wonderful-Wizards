@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     [field: SerializeField] public float groundCheckRay { get; private set; } = 0.25f;
     [field: SerializeField] public bool inInteractRange { get; private set; } = false;
     [field: SerializeField] public AreaInteract interactTarget { get; private set; } = null;
-    [field: SerializeField] public bool dead { get; private set; } = false;
+    [field: SerializeField] public bool dead = false;
 
     [field: SerializeField] public Pickup itemHolding = null;
 

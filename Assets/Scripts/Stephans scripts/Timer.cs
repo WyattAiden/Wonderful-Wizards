@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     public Image oxygenMeter;
     public float oxygenMeterMaxPercent = 100f; // Set a default
-    private float oxygenMeterCurrentPercent;
+    public float oxygenMeterCurrentPercent;
 
     public CanvasGroup deathScreen;
     public bool isDeathScreenVisible;
